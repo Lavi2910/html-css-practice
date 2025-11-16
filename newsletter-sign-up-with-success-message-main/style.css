@@ -1,0 +1,87 @@
+:root{
+    font-family: "Roboto";
+}
+
+body{
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-rect{
+    height: 55vh;
+    width: 50vw;
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    padding: 60px;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.574);
+}
+.left-form{
+    justify-content: start;
+    display: flex;
+    align-items: start;
+    width: 60%;
+    color: hsl(234, 29%, 20%);
+    flex-direction: column;
+    gap: 0px;
+}
+.title{
+    font-size: 55px;
+    margin: 0px;
+}
+
+.desc{
+    font-size: medium;
+}
+
+.checklistItem{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.tickImg{
+    max-width: 25px;
+}
+.lab{
+    font-weight: bold;
+    color: hsl(234, 29%, 20%);
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    width: 80%;
+}
+input[type=email]{
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(197, 197, 197);
+}
+
+button[type=submit]{
+    width: 110%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-size: small;
+
+}
+
+.right-img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desk-img{
+    width: 22vw;
+}
