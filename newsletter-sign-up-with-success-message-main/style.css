@@ -1,8 +1,8 @@
-:root{
+:root {
     font-family: "Roboto";
 }
 
-body{
+body {
     background-color: hsl(235, 18%, 26%);
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 
-.main-rect{
+.main-rect {
     height: 55vh;
     width: 50vw;
     display: flex;
@@ -20,7 +20,8 @@ body{
     padding: 60px;
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.574);
 }
-.left-form{
+
+.left-form {
     justify-content: start;
     display: flex;
     align-items: start;
@@ -29,42 +30,47 @@ body{
     flex-direction: column;
     gap: 0px;
 }
-.title{
+
+.title {
     font-size: 55px;
     margin: 0px;
 }
 
-.desc{
+.desc {
     font-size: medium;
 }
 
-.checklistItem{
+.checklistItem {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.tickImg{
+
+.tickImg {
     max-width: 25px;
 }
-.lab{
+
+.lab {
     font-weight: bold;
     color: hsl(234, 29%, 20%);
 }
-.main-form{
+
+.main-form {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     gap: 20px;
     width: 80%;
 }
-input[type=email]{
+
+input[type=email] {
     padding: 15px;
     width: 100%;
     border-radius: 5px;
     border: solid 1px rgb(197, 197, 197);
 }
 
-button[type=submit]{
+button[type=submit] {
     width: 110%;
     padding: 15px;
     border-radius: 5px;
@@ -72,16 +78,134 @@ button[type=submit]{
     background-color: hsl(234, 29%, 20%);
     color: hsl(0, 0%, 100%);
     font-size: small;
-
+    cursor: not-allowed;
 }
 
-.right-img{
+.main-form:valid button[type=submit] {
+    width: 110%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    background-image: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-size: small;
+    cursor: pointer;
+}
+
+.main-form:valid:hover button[type=submit] {
+    width: 110%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(23, 100%, 67%));
+    color: hsl(0, 0%, 100%);
+    font-size: small;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 2px hsla(4, 58%, 54%, 0.525);
+}
+
+.right-img {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.desk-img{
+.desk-img {
     width: 22vw;
+}
+
+.mobile-main {
+    display: none;
+}
+
+.tablet-main {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+        flex-direction: column;
+        width: 96vw;
+    }
+
+    .tablet-main {
+        display: none;
+    }
+
+    .main-rect {
+        display: none;
+    }
+
+    .mobile-main {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .lower-part {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        margin-top: 20px;
+        color: hsl(234, 29%, 20%);
+        margin-left: 30px;
+        gap : 0px;
+    }
+
+    .pic{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-rect {
+        display: none;
+    }
+    body{
+        background-color: hsl(0, 0%, 100%);
+        padding: 0px;
+    }
+    .mobile-main {
+        display: none
+    }
+    .tablet-main{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .pic{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-top: -325px;
+    }
+    .lower-part {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        color: hsl(234, 29%, 20%);
+        margin-left: 50px;
+        gap : 0px;
+    }
 }
