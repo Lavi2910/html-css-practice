@@ -1,9 +1,11 @@
 :root {
     font-family: "Roboto";
+    --primary-bg-color:hsl(235, 18%, 26%) ;
+    --secondary-bg-color:hsl(0, 0%, 100%);
 }
 
 body {
-    background-color: hsl(235, 18%, 26%);
+    background-color: var(--primary-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +17,7 @@ body {
     height: 55vh;
     width: 50vw;
     display: flex;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--secondary-bg-color);
     border-radius: 25px;
     padding: 60px;
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.574);
@@ -63,14 +65,14 @@ body {
     width: 80%;
 }
 
-input[type=email] {
+input {
     padding: 15px;
     width: 100%;
     border-radius: 5px;
     border: solid 1px rgb(197, 197, 197);
 }
 
-button[type=submit] {
+button {
     width: 110%;
     padding: 15px;
     border-radius: 5px;
@@ -81,7 +83,7 @@ button[type=submit] {
     cursor: not-allowed;
 }
 
-.main-form:valid button[type=submit] {
+.main-form:valid button{
     width: 110%;
     padding: 15px;
     border-radius: 5px;
@@ -92,7 +94,7 @@ button[type=submit] {
     cursor: pointer;
 }
 
-.main-form:valid:hover button[type=submit] {
+.main-form:valid:hover button {
     width: 110%;
     padding: 15px;
     border-radius: 5px;
@@ -129,7 +131,7 @@ button[type=submit] {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--secondary-bg-color);
         flex-direction: column;
         width: 96vw;
     }
@@ -178,7 +180,7 @@ button[type=submit] {
         display: none;
     }
     body{
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--secondary-bg-color);
         padding: 0px;
     }
     .mobile-main {
