@@ -46,6 +46,7 @@ body {
 
 .desc {
     font-size: medium;
+    max-width: 80%;
 }
 
 .checklistItem {
